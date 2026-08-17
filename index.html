@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SV Enterprises - Premium Dry Fruits & Spices</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i data-lucide="leaf"></i>
+            </div>
+
+            <!-- Hidden by default until login -->
+            <div class="greeting" id="sidebar-greeting" style="display: none;">
+                <h2>Good<br>afternoon, <strong id="sidebar-user-name">User</strong></h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-profile-btn">
+                    <i data-lucide="user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <div class="icon-badge">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="heart"></i>
+                    <span>Liked items</span>
+                </a>
+            </nav>
+
+            <!-- Hidden by default until login -->
+            <div class="user-profile" id="sidebar-user-profile" style="display: none;">
+                <img src="" alt="User Avatar" class="avatar" id="sidebar-user-avatar">
+                <button id="logout-btn" class="logout-btn" aria-label="Log out"><i data-lucide="log-out"></i></button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="search-bar">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <div class="auth-actions">
+                    <button class="auth-btn btn-login" id="header-login-btn">Login</button>
+                    <button class="auth-btn btn-register" id="header-register-btn">Register</button>
+                </div>
+            </header>
+
+            <!-- Store Area: Premium Dry Fruits -->
+            <div class="category-section" data-category="dry-fruits">
+                <div class="section-header-compact">
+                    <div class="section-title-small">
+                        <i data-lucide="leaf" class="section-icon-small"></i>
+                        <span>Dry Fruits</span>
+                    </div>
+                    <button class="arrow-btn" aria-label="View all Dry Fruits"><i
+                            data-lucide="arrow-right"></i></button>
+                </div>
+
+                <div class="horizontal-list">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-id="df-1">
+                        <div class="product-img-container">
+                            <img src="assets/almonds_bowl_1786631769707.png" alt="California Almonds">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">California Almonds</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹800 /kg</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-id="df-2">
+                        <div class="product-img-container">
+                            <img src="assets/cashews_bowl_1786632602251.png" alt="Whole Cashews">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Whole Cashews (W320)</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹1,200 /kg</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-id="df-3">
+                        <div class="product-img-container">
+                            <img src="assets/pistachios_bowl_1786726876699.png" alt="Roasted Pistachios">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Roasted Pistachios</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹1,400 /kg</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Area: Spices -->
+            <div class="category-section" data-category="spices">
+                <div class="section-header-compact">
+                    <div class="section-title-small">
+                        <i data-lucide="flame" class="section-icon-small"></i>
+                        <span>Spices</span>
+                    </div>
+                    <button class="arrow-btn" aria-label="View all Spices"><i data-lucide="arrow-right"></i></button>
+                </div>
+
+                <div class="horizontal-list">
+                    <!-- Spice 1 -->
+                    <div class="product-card" data-id="sp-1">
+                        <div class="product-img-container">
+                            <img src="assets/cloves_1786726904061.png" alt="Premium Cloves">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Cloves</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹250 /100g</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spice 2 -->
+                    <div class="product-card" data-id="sp-2">
+                        <div class="product-tag">Organic</div>
+                        <div class="product-img-container">
+                            <img src="assets/cinnamon_sticks_1786726948205.png" alt="Ceylon Cinnamon">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Ceylon Cinnamon Sticks</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹300 /100g</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spice 3 -->
+                    <div class="product-card" data-id="sp-3">
+                        <div class="product-img-container">
+                            <img src="assets/cardamom_pods_1786727870373.png" alt="Green Cardamom">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Green Cardamom</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹450 /100g</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spice 4 -->
+                    <div class="product-card" data-id="sp-4">
+                        <div class="product-img-container">
+                            <img src="assets/black_pepper_1786727845352.png" alt="Black Peppercorns">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Black Peppercorns</h3>
+                            <div class="product-bottom">
+                                <span class="product-price">₹180 /100g</span>
+                                <button class="add-btn"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Slide-out Panel overlay and container -->
+    <div class="panel-overlay" id="panel-overlay"></div>
+    <div class="slide-panel" id="slide-panel">
+        <div class="panel-header">
+            <div class="panel-title" id="panel-title">
+                <i data-lucide="list" id="panel-icon"></i>
+                <span id="panel-title-text">Category Name</span>
+            </div>
+            <button class="panel-close-btn" id="panel-close-btn" aria-label="Close panel">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="panel-content">
+            <!-- Products will be injected here via JS -->
+            <div class="product-grid" id="panel-product-grid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Slide-out Panel -->
+    <div class="slide-panel profile-panel" id="profile-panel">
+        <div class="panel-header">
+            <div class="panel-title">
+                <i data-lucide="user"></i>
+                <span>My Profile</span>
+            </div>
+            <button class="panel-close-btn" id="profile-close-btn" aria-label="Close profile">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="panel-content">
+            <div class="profile-form-container">
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar-placeholder">
+                        <i data-lucide="user"></i>
+                    </div>
+                </div>
+                
+                <form id="profile-form">
+                    <div class="input-group">
+                        <label for="profile-name">Name</label>
+                        <input type="text" id="profile-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="input-group">
+                        <label for="profile-phone">Phone no</label>
+                        <input type="tel" id="profile-phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="input-group">
+                        <label for="profile-address">Address</label>
+                        <textarea id="profile-address" rows="3" placeholder="Enter your full address"></textarea>
+                    </div>
+                    
+                    <button type="button" class="auth-submit-btn profile-save-btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal overlay -->
+    <div class="auth-overlay" id="auth-overlay"></div>
+    
+    <!-- Login Modal -->
+    <div class="auth-modal" id="login-modal">
+        <button class="auth-close-btn close-modal-btn" aria-label="Close login panel">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="auth-container">
+            <div class="auth-section">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required minlength="6" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Login</button>
+                </form>
+
+                <div class="google-auth-divider">
+                    <span>OR</span>
+                </div>
+                
+                <div class="google-btn-container">
+                    <div id="google-signin-btn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="auth-modal" id="register-modal">
+        <button class="auth-close-btn close-modal-btn" aria-label="Close register panel">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="auth-container">
+            <div class="auth-section">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="input-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" required placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" required minlength="6" placeholder="Create a password (min 6 chars)">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password-confirm">Retype Password</label>
+                        <input type="password" id="reg-password-confirm" required minlength="6" placeholder="Retype your password">
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons initially
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
